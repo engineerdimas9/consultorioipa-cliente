@@ -1,0 +1,323 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+.blue-medical{
+  background-color: #000033 !important;
+}
+.text-medical{
+  color:#000033 !important;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  height: 100vh;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  background-color: #ffffff;
+}
+
+a{
+  text-decoration: none;
+}
+
+.main-container {
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100vh;
+  position: fixed;
+}
+
+.no-display {
+  display: none;
+}
+
+.login-container {
+  background: url("../../images/medica1.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.login-content {
+  padding-top: 1em !important;
+  overflow-y: auto;
+  
+}
+
+.login-footer {
+  z-index: 9999;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.login-right-image {
+  z-index: -9999;
+  background-color: transparent;
+  background: url("../../images/1522b644123fb1139d46a129315d092b.jpg") no-repeat center center;
+  padding: 0 !important;
+  height: 448px;
+  overflow: hidden;
+}
+
+.no-padding {
+  padding: 0px;
+  margin: 0px;
+}
+
+.login-parent {
+  position: relative;
+}
+
+.login-child {
+  margin: 0 auto !important;
+  padding: 0px !important;
+  height: auto;
+}
+
+.login-in-middle {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: auto;
+  position: absolute;
+  top: 0;
+  transform: translateY(0%);
+  
+}
+
+@media only screen and (min-height: 601px) {
+  .login-in-middle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.no-selectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+/* Tab */
+.tabs {
+  background-color: #ffffff;
+}
+
+.tabs .tab a {
+  color: rgb(0,0,51);
+}
+
+.tabs .tab a:hover {
+  color: rgb(0,0,51);
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: rgba(0,0,51, 0.4);
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+  color:  rgb(0,0,51);
+  font-weight: bold;
+}
+
+.tabs .indicator {
+  background-color:  rgb(0,0,51);
+}
+
+/* Input */
+
+.input-field label {
+  color: rgb(0,0,51) !important;
+}
+input{
+  color: rgb(0,0,51) !important;
+}
+
+.input-field input[type=text]:focus + label,
+.input-field input[type=password]:focus + label,
+.input-field input[type=email]:focus + label,
+.input-field input[type=url]:focus + label,
+.input-field input[type=time]:focus + label,
+.input-field input[type=date]:focus + label,
+.input-field input[type=datetime]:focus + label,
+.input-field input[type=datetime-local]:focus + label,
+.input-field input[type=tel]:focus + label,
+.input-field input[type=number]:focus + label,
+.input-field input[type=search]:focus + label {
+  color: rgb(0,0,51) !important;
+}
+
+input:not([type]):focus:not([readonly]),
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]),
+input[type="email"]:not(.browser-default):focus:not([readonly]),
+input[type="url"]:not(.browser-default):focus:not([readonly]),
+input[type="time"]:not(.browser-default):focus:not([readonly]),
+input[type="date"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime"]:not(.browser-default):focus:not([readonly]),
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly]),
+input[type="tel"]:not(.browser-default):focus:not([readonly]),
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input[type="search"]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid rgb(0,0,51) !important;
+  -webkit-box-shadow: 0 1px 0 0 rgb(0,0,51) !important;
+  box-shadow: 0 1px 0 0 rgb(0,0,51) !important;
+}
+
+input:not([type]):focus:not([readonly]) + label,
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="password"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="email"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="url"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="time"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="date"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="datetime"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="datetime-local"]:not(.browser-default):focus:not([readonly])
+  + label,
+input[type="tel"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="number"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="search"]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: rgb(0,0,51) !important;
+}
+
+input:not([type]):focus.valid ~ label,
+input[type="text"]:not(.browser-default):focus.valid ~ label,
+input[type="password"]:not(.browser-default):focus.valid ~ label,
+input[type="email"]:not(.browser-default):focus.valid ~ label,
+input[type="url"]:not(.browser-default):focus.valid ~ label,
+input[type="time"]:not(.browser-default):focus.valid ~ label,
+input[type="date"]:not(.browser-default):focus.valid ~ label,
+input[type="datetime"]:not(.browser-default):focus.valid ~ label,
+input[type="datetime-local"]:not(.browser-default):focus.valid ~ label,
+input[type="tel"]:not(.browser-default):focus.valid ~ label,
+input[type="number"]:not(.browser-default):focus.valid ~ label,
+input[type="search"]:not(.browser-default):focus.valid ~ label,
+textarea.materialize-textarea:focus.valid ~ label {
+  color: rgb(0,0,51) !important;
+}
+
+input:not([type]):focus.invalid ~ label,
+input[type="text"]:not(.browser-default):focus.invalid ~ label,
+input[type="password"]:not(.browser-default):focus.invalid ~ label,
+input[type="email"]:not(.browser-default):focus.invalid ~ label,
+input[type="url"]:not(.browser-default):focus.invalid ~ label,
+input[type="time"]:not(.browser-default):focus.invalid ~ label,
+input[type="date"]:not(.browser-default):focus.invalid ~ label,
+input[type="datetime"]:not(.browser-default):focus.invalid ~ label,
+input[type="datetime-local"]:not(.browser-default):focus.invalid ~ label,
+input[type="tel"]:not(.browser-default):focus.invalid ~ label,
+input[type="number"]:not(.browser-default):focus.invalid ~ label,
+input[type="search"]:not(.browser-default):focus.invalid ~ label,
+textarea.materialize-textarea:focus.invalid ~ label {
+  color: rgb(0,0,51) !important;
+}
+
+input.valid:not([type]),
+input.valid:not([type]):focus,
+input.valid[type="text"]:not(.browser-default),
+input.valid[type="text"]:not(.browser-default):focus,
+input.valid[type="password"]:not(.browser-default),
+input.valid[type="password"]:not(.browser-default):focus,
+input.valid[type="email"]:not(.browser-default),
+input.valid[type="email"]:not(.browser-default):focus,
+input.valid[type="url"]:not(.browser-default),
+input.valid[type="url"]:not(.browser-default):focus,
+input.valid[type="time"]:not(.browser-default),
+input.valid[type="time"]:not(.browser-default):focus,
+input.valid[type="date"]:not(.browser-default),
+input.valid[type="date"]:not(.browser-default):focus,
+input.valid[type="datetime"]:not(.browser-default),
+input.valid[type="datetime"]:not(.browser-default):focus,
+input.valid[type="datetime-local"]:not(.browser-default),
+input.valid[type="datetime-local"]:not(.browser-default):focus,
+input.valid[type="tel"]:not(.browser-default),
+input.valid[type="tel"]:not(.browser-default):focus,
+input.valid[type="number"]:not(.browser-default),
+input.valid[type="number"]:not(.browser-default):focus,
+input.valid[type="search"]:not(.browser-default),
+input.valid[type="search"]:not(.browser-default):focus,
+textarea.materialize-textarea.valid,
+textarea.materialize-textarea.valid:focus,
+.select-wrapper.valid > input.select-dropdown {
+  border-bottom: 1px solid rgb(0,0,51) !important;
+  -webkit-box-shadow: 0 1px 0 0 rgb(0,0,51) !important;
+  box-shadow: 0 1px 0 0 rgb(0,0,51) !important;
+}
+
+input.invalid:not([type]),
+input.invalid:not([type]):focus,
+input.invalid[type="text"]:not(.browser-default),
+input.invalid[type="text"]:not(.browser-default):focus,
+input.invalid[type="password"]:not(.browser-default),
+input.invalid[type="password"]:not(.browser-default):focus,
+input.invalid[type="email"]:not(.browser-default),
+input.invalid[type="email"]:not(.browser-default):focus,
+input.invalid[type="url"]:not(.browser-default),
+input.invalid[type="url"]:not(.browser-default):focus,
+input.invalid[type="time"]:not(.browser-default),
+input.invalid[type="time"]:not(.browser-default):focus,
+input.invalid[type="date"]:not(.browser-default),
+input.invalid[type="date"]:not(.browser-default):focus,
+input.invalid[type="datetime"]:not(.browser-default),
+input.invalid[type="datetime"]:not(.browser-default):focus,
+input.invalid[type="datetime-local"]:not(.browser-default),
+input.invalid[type="datetime-local"]:not(.browser-default):focus,
+input.invalid[type="tel"]:not(.browser-default),
+input.invalid[type="tel"]:not(.browser-default):focus,
+input.invalid[type="number"]:not(.browser-default),
+input.invalid[type="number"]:not(.browser-default):focus,
+input.invalid[type="search"]:not(.browser-default),
+input.invalid[type="search"]:not(.browser-default):focus,
+textarea.materialize-textarea.invalid,
+textarea.materialize-textarea.invalid:focus,
+.select-wrapper.invalid > input.select-dropdown,
+.select-wrapper.invalid > input.select-dropdown:focus {
+  border-bottom: 1px solid rgb(0,0,51) !important;
+  -webkit-box-shadow: 0 1px 0 0 rgb(0,0,51) !important;
+  box-shadow: 0 1px 0 0 rgb(0,0,51) !important;
+}
+
+.input-field .prefix.active {
+  color: rgb(0,0,51) !important;
+}
+::-webkit-scrollbar {
+  width: 0.2em;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}

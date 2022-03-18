@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    
+    <title>Control De Consultas Ipasme</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='lib/css/materialize.min.css'>
+    <link rel="stylesheet" href="lib/css/index.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="main-container login-container login-parent">
+  <div class="login-in-middle full-width">
+    <div class="container login-child z-depth-3" style=" background-color: rgba(255,255,255,0.75);">
+      <div class="row" style="margin-left: 0 !important; margin-right: 0 !important;">
+        <div class="col l6 m6 s12"  style=" background-color: transparent; margin-top:20px;">
+          <ul class="tabs tabs-fixed-width" name="tabs" style=" background-color: transparent;">
+            <li class="tab col s3">
+              <a class="active" href="#login-tab">Iniciar sesión</a>
+            </li>            
+          </ul>
+          <div id="login-tab" class="col s12 login-content no-selectable" style="background-color: transparent;">
+            <!-- Login form -->
+            
+            <form class="col s12" style="background-color: transparent;">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">mail</i>
+                  <input  id="login_email" name="user" type="text" class="validate" autocomplete="off" required/>
+                  <label for="login_email">Usuario</label>
+                  <span class="helper-text" data-error="El valor ingresado no es válido" />
+                </div>
+              </div>              
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">vpn_key</i>
+                  <input id="login_password" name="password" type="password" class="validate" autocomplete="off" required />
+                  <label for="login_password">Contraseña</label>
+                  <span class="helper-text" data-error="Este campo es obligatorio" />
+                </div>
+              </div>        
+              
+              <div class="row center-align">
+                  <button type="button" id="ingresar" style="border-radius: 141px 141px 141px 141px; border: 1px solid #000033; background: transparent; color: #000033; width: 60%;" class="btn waves-effect waves-light"> Entrar </button>
+              </div>              
+            </form>
+          </div>         
+        </div>
+        <div class="col l6 m6 s12 login-right-image hide-on-small-only"></div>
+      </div>
+      <div class="login-footer center-align blue-medical">
+        <a href="#" style="text-decoration:none; color: #ffffff;">Control De Consultas IPASME</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- partial -->
+    <script src='lib/js/jquery.min.js'></script>
+    <script src='lib/js/materialize.min.js'></script>
+    <script src='view.model/login.vm.js'></script>
+</body>
+</html>

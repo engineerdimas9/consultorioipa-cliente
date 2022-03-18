@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../lib/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../lib/css/dashboard.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../lib/css/table-responsive.css"  media="screen,projection"/>
+</head>
+<body>
+<header>    
+    <nav>
+        <div class="nav-wrapper z-depth-3 blue-medical">
+            <a href="#" class="brand-logo light-blue-text text-lighten-2">Dashboard</a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a id="logout" class="light-blue-text text-lighten-2"><i class="material-icons">power_settings_new</i></a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul id="slide-out" class="sidenav sidenav-fixed z-depth-3 blue-medical">
+      <li><div class="user-view acrylic medium-high">
+        <div class="background" id="wallpaper">
+          <img src="../images/medical.jpg">
+        </div>
+        <a href="#user"><img class="circle" src="../images/ipasme.jpg"></a>
+        <a href="#name"><span class="text-medical name">Ipasme Maturin</span></a>
+        <a href="#email"><span class="text-medical email">ipasme.maturin@gmail.com</span></a>
+      </div></li>
+      <li>
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header waves-effect waves-grey">
+              <i class="material-icons light-blue-text text-lighten-2">description</i>
+              <span id="cita-control" class="light-blue-text text-lighten-2">Consultas</span>			  
+            </div>              		
+          </li>        
+        </ul>
+      </li>
+      <li><div class="divider"></div></li>
+      <li>
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header waves-effect waves-grey">
+              <i class="material-icons light-blue-text text-lighten-2">settings</i>
+              <span class="light-blue-text text-lighten-2">Configuraciones</span>			  
+            </div> 
+              <div class="collapsible-body">
+                <ul>
+                    <li><a href="#!" id="tipo">Tipos Pacientes</a></li>
+                    <li><a href="#!" id="especialidades">Especialidades</a></li>
+                    <li><a href="#!" id="medico">Medicos</a></li>                    
+                </ul>                				  				  		  
+            </div>			
+          </li>        
+        </ul>
+      </li> 
+    </ul>
+</header>
+<main>
+  <!-- tipos pacientes -->
+    <div class="container" id="tpaciente">
+        <div class="row" id="sehen-buro">
+          <div class="table-responsive-vertical z-depth-5 white">
+            <div class="row">
+              <div class="input-field col s12 m4 l4 lx1">
+                <i class="material-icons prefix">search</i>
+                <input id="search-paciente" type="text" class="validate">
+                <label for="search">Buscar . . .</label>
+              </div>
+              <div class="input-field col s12 m8 l8 lx1">
+                <a data-target="add-tipos" class="modal-tipo modal-trigger btn-floating btn-large waves-effect waves-light red accent-4 right z-depth-5"><i class="material-icons">add</i></a>
+              </div>
+            </div>
+            <table id="table" class="table table-hover table-mc-red white">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Acciones</th>                  
+                </tr>
+              </thead>
+              <tbody id="tipo-paciente">
+                          
+              </tbody>
+            </table>
+          </div>        
+        </div>
+    </div>
+
+    <!-- especialidades -->
+
+    <div class="container" id="esp-medical">
+      <div class="row" id="sehen-buro">
+        <div class="table-responsive-vertical z-depth-5 white">
+          <div class="row">
+            <div class="input-field col s12 m4 l4 lx1">
+              <i class="material-icons prefix">search</i>
+              <input id="search-esp" type="text" class="validate">
+              <label for="search">Buscar . . .</label>
+            </div>
+            <div class="input-field col s12 m8 l8 lx1">
+              <a data-target="add-esp" class="modal-esp modal-trigger btn-floating btn-large waves-effect waves-light red accent-4 right z-depth-5"><i class="material-icons">add</i></a>
+            </div>
+          </div>
+          <table id="table" class="table table-hover table-mc-red white">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>                  
+              </tr>
+            </thead>
+            <tbody id="esp">
+                        
+            </tbody>
+          </table>
+        </div>        
+      </div>
+  </div>
+
+  <!-- medicos -->
+
+  <div class="container" id="medical">
+    <div class="row" id="sehen-buro">
+      <div class="table-responsive-vertical z-depth-5 white">
+        <div class="row">
+          <div class="input-field col s12 m4 l4 lx1">
+            <i class="material-icons prefix">search</i>
+            <input id="search-med" type="text" class="validate">
+            <label for="search">Buscar . . .</label>
+          </div>
+          <div class="input-field col s12 m8 l8 lx1">
+            <a data-target="add-med" class="modal-med modal-trigger btn-floating btn-large waves-effect waves-light red accent-4 right z-depth-5"><i class="material-icons">add</i></a>
+          </div>
+        </div>
+        <table id="table" class="table table-hover table-mc-red white">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Especilidad</th>
+              <th>Acciones</th>                  
+            </tr>
+          </thead>
+          <tbody id="doctor">
+                      
+          </tbody>
+        </table>
+      </div>        
+    </div>   
+  </div>
+
+   <!-- control de consultas -->
+
+  <div class="container" id="consulta-control">
+    <div class="row" id="consultas-control">
+      <div class="table-responsive-vertical z-depth-5 white">
+        <div class="row">
+          <div class="input-field col s12 m4 l4 lx1">
+            <i class="material-icons prefix">search</i>
+            <input id="search-cita" type="text" class="validate">
+            <label for="search">Buscar . . .</label>
+          </div>
+          <div class="input-field col s12 m8 l8 lx1">
+            <!--<a id="excel" class="btn-floating btn-large waves-effect waves-light right z-depth-5"><i class="material-icons">insert_drive_file</i></a>-->
+            <a data-target="citas-control" class="modal-cita modal-trigger btn-floating btn-large waves-effect waves-light red accent-4 right z-depth-5"><i class="material-icons">add</i></a>
+          </div>
+        </div>
+        
+        <table id="table" class="table table-hover table-mc-red white">
+          <thead>
+            <tr>
+              <th>Cita</th>
+              <th>Fecha</th>
+              <th>Medico</th>
+              <th>Espacialidad</th>
+              <th>Estatus</th>
+              <th>Acciones</th>                  
+            </tr>
+          </thead>
+          <tbody id="citas">
+                      
+          </tbody>
+        </table>
+     
+      </div>        
+    </div>
+  </div>
+</main>
+
+
+
+<!-- Area para modales  -->
+<!-- Modal para tipos pacientes -->
+<div id="add-tipos" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input  placeholder="ID" id="id-tipo-p" type="text" class="validate">
+              <label for="id-tipo-p">ID:</label>
+            </div>
+            <div class="input-field col s6">
+              <input placeholder="Nombre" id="nombres-p" type="text" class="validate">
+              <label for="nombres-p">Nombre:</label>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="up-tipo waves-effect waves-green btn-flat">Update</a>
+      <a class="add-tipo waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+
+<!-- Modal para especialidades -->
+<div id="add-esp" class="modal">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input  placeholder="ID" id="id-esp" type="text" class="validate">
+            <label for="id-tipo-p">ID:</label>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Nombre" id="nombres-esp" type="text" class="validate">
+            <label for="nombres-p">Nombre:</label>
+          </div>
+        </div>          
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="up-esp waves-effect waves-green btn-flat">Update</a>
+    <a class="add-esp waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
+<!-- Modal para medicos -->
+<div id="add-med" class="modal">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s3">
+            <input  placeholder="ID" id="id-med" type="text" class="validate">
+            <label for="id-med">ID:</label>
+          </div>
+          <div class="input-field col s3">
+            <input  placeholder="Cedula" id="cedula-med" type="text" class="validate">
+            <label for="cedula-med">Cedula:</label>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Nombre" id="nombres-med" type="text" class="validate">
+            <label for="nombres-med">Nombre:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s3">
+            <select id="select-esp">
+              <option value="" disabled selected>Opciones:</option>
+              
+            </select>
+            <label>Especialidades:</label>
+          </div>
+          <div class="input-field col s3">
+            <input  placeholder="Telefono" id="phone-med" type="text" class="validate">
+            <label for="phone-med">Telefono:</label>
+          </div>
+          <div class="input-field col s6">
+            <input placeholder="Email" id="email-med" type="text" class="validate">
+            <label for="email-med">Email:</label>
+          </div>
+        </div>          
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="up-med waves-effect waves-green btn-flat">Update</a>
+    <a class="add-med waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
+
+<!-- Modal para tipos control citas -->
+<div id="citas-control" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="col s12">
+          <div class="row">
+            <div class="input-field col s4">
+              <input  placeholder="Nª Control" id="control" type="text" class="validate">
+              <label for="contrl">Nª Control:</label>
+            </div>
+          </div>
+          <h5>Datos del Paciente</h5>
+          <div class="row">
+            <div class="input-field col s6">
+              <input  placeholder="ID" id="id-paciente" type="text" class="validate">
+              <label for="id-paciente">ID:</label>
+            </div>
+            <div class="input-field col s6">
+              <select id="select-paciente">
+                <option value="" disabled selected>Opciones:</option>                
+              </select>
+              <label>Tipo Paciente:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input  placeholder="Nombre Completo" id="nombre-paciente" type="text" class="validate">
+              <label for="nombre-paciente">Nombre Completo:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input  placeholder="Direccion" id="direccion-paciente" type="text" class="validate">
+              <label for="direccion-paciente">Direccion:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <input  placeholder="Email" id="email-paciente" type="text" class="validate">
+              <label for="email-paciente">Email:</label>
+            </div>
+            <div class="input-field col s4">
+              <select id="select-genero">
+                <option value="" disabled selected>Opciones:</option>
+                                
+              </select>
+              <label>Genero:</label>
+            </div>
+            <div class="input-field col s4">
+              <input  placeholder="format 0000-00-00" id="fecha-paciente" type="text" class="validate">
+              <label for="fecha-paciente">Fecha Nacimiento:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <input  placeholder="Telefono" id="phone-paciente" type="text" class="validate">
+              <label for="phone-paciente">Telefono:</label>
+            </div>
+            <div class="input-field col s4">
+              <input  placeholder="Patologia" id="patologia-paciente" type="text" class="validate">
+              <label for="patologia-paciente">Patologia:</label>
+            </div>
+            <div class="input-field col s4">
+              <input  placeholder="Medicamentos" id="medica-paciente" type="text" class="validate">
+              <label for="medica-paciente">Medicamentos:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input  placeholder="Alergias" id="alergia-paciente" type="text" class="validate">
+              <label for="alergia-paciente">Alergia:</label>
+            </div>
+          </div>
+          <h5>Datos de la Consulta</h5> 
+          <div class="row">
+            <div class="input-field col s6">
+              <input  placeholder="Nª Cita" id="cita-paciente" type="text" class="validate">
+              <label for="cita-paciente">Nª Cita:</label>
+            </div>
+            <div class="input-field col s6">
+              <input  placeholder="Format 000-00-00" id="fecha-cita" type="text" class="validate">
+              <label for="fecha-cita">Fecha Cita:</label>
+            </div>            
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input  placeholder="Diagnostico" id="diagnostico" type="text" class="validate">
+              <label for="diagnostico">Dignostico:</label>
+            </div>
+          </div>   
+          <div class="row">
+            <div class="input-field col s6">
+              <select id="select-especialidad">
+                <option value="" disabled selected>Opciones:</option>                
+              </select>
+              <label>Especialidades:</label>
+            </div>
+            <div class="input-field col s6">
+              <select id="select-medico">
+                <option value="" disabled selected>Opciones:</option>                
+              </select>
+              <label>Medico:</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <select id="select-estatus">
+                <option value="" disabled selected>Opciones:</option>                                
+              </select>
+              <label>Estatus:</label>
+            </div>
+            <div class="input-field col s8">
+              <input  placeholder="Observaciones" id="observacion" type="text" class="validate">
+              <label for="observacion">Observaciones:</label>
+            </div>
+          </div>
+                           
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="up-cita waves-effect waves-green btn-flat">Update</a>
+      <a class="add-consulta waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+
+<!-- Fin de area para modales  -->
+    <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../lib/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../view.model/dashboard-init.js"></script>    
+    <script type="text/javascript" src="../view.model/tipo-paciente.vm.js"></script>
+    <script type="text/javascript" src="../view.model/espacielidades.vm.js"></script>
+    <script type="text/javascript" src="../view.model/medico.vm.js"></script>
+    <script type="text/javascript" src="../view.model/citas.vm.js"></script>    
+</body>
+</html>

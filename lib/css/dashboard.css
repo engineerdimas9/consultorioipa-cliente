@@ -1,0 +1,64 @@
+header, main, footer {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}
+
+#wallpaper{
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.blue-medical{
+    background-color: #000033 !important;
+}
+.text-medical{
+    color:#000033 !important;
+}
+
+.acrylic {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .acrylic::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    right: -8px;
+    bottom: -8px;
+    z-index: -1;
+    background-blend-mode: exclusion;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    filter: url(#blur);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius="8");
+  }
+  
+  .acrylic::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=ffffff00&noise=a0a0a0&density=35&opacity=10");
+  }
+  
+  .acrylic.medium::after {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .acrylic.medium-high::after {
+    background-color: rgba(255, 255, 255, 0.6);
+  }

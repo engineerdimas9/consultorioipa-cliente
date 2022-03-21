@@ -14,29 +14,25 @@ $(document).ready(function(){
             $("#tpaciente").hide();
             $("#esp-medical").hide();
             $("#medical").hide();
-            $("#consulta-control").show();
-            $('.sidenav').sidenav('close');        
+            $("#consulta-control").show();                   
         });
         $("#tipo").click(function(){
             $("#consulta-control").hide();
             $("#esp-medical").hide();
             $("#medical").hide();
-            $("#tpaciente").show();
-            $('.sidenav').sidenav('close');        
+            $("#tpaciente").show();                   
         });
         $("#especialidades").click(function(){
             $("#consulta-control").hide();
             $("#tpaciente").hide();
             $("#medical").hide();
-            $("#esp-medical").show();
-            $('.sidenav').sidenav('close');        
+            $("#esp-medical").show();                   
         });
         $("#medico").click(function(){
             $("#consulta-control").hide();
             $("#tpaciente").hide();
             $("#esp-medical").hide();
-            $("#medical").show();
-            $('.sidenav').sidenav('close');        
+            $("#medical").show();                    
         });
         $("#logout").click(function(){
             localStorage.removeItem("token");

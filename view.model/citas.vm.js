@@ -85,7 +85,7 @@ $(document).ready(function(){
             beforeSend: function(request) {
                 request.setRequestHeader("x-access-token", token);
             }, 
-            url: "http://localhost:4000/cita/"+id,
+            url: "https://consultorio-ipa.herokuapp.com/cita/"+id,
             dataType: "json", 
             success: function (resp){
                 console.log(resp);
